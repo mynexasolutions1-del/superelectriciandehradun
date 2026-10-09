@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M N Super Electricals & Air Cool – Electrical & Home Appliance Repair in Dehradun</title>
+<meta name="description" content="Reliable electrical and home appliance repair in Dehradun. House wiring, AC, fridge, washing machine, geyser, RO, pump repair. Call 8630529924.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1f3f;
+  --navy-2:#112b54;
+  --yellow:#f9b625;
+  --yellow-d:#e5a010;
+  --ink:#1a2233;
+  --muted:#5b6578;
+  --bg:#ffffff;
+  --soft:#f5f7fb;
+  --line:#e4e8f0;
+  --green:#25d366;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(11,31,63,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h1,h2,h3{line-height:1.2}
+.sec-title{text-align:center;font-size:clamp(24px,3.4vw,34px);font-weight:700;color:var(--navy)}
+.sec-sub{text-align:center;color:var(--muted);max-width:640px;margin:10px auto 36px;font-size:15px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;border:2px solid transparent;cursor:pointer;transition:.2s;font-family:inherit}
+.btn small{display:block;font-size:11px;font-weight:500;opacity:.85;line-height:1.1}
+.btn b{display:block;font-size:16px;line-height:1.2}
+.btn-yellow{background:var(--yellow);color:var(--navy)}
+.btn-yellow:hover{background:var(--yellow-d)}
+.btn-outline{background:#fff;color:var(--navy);border-color:var(--line);box-shadow:var(--shadow)}
+.btn-outline:hover{border-color:var(--green)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2)}
+.btn svg{width:22px;height:22px;flex:none}
+.wa-ico{color:var(--green)}
+
+/* Top bar */
+.topbar{background:var(--navy);color:#dbe4f5;font-size:12.5px}
+.topbar .container{display:flex;gap:22px;justify-content:space-between;align-items:center;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.topbar span{display:inline-flex;gap:6px;align-items:center}
+.topbar svg{width:14px;height:14px;color:var(--yellow)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 14px rgba(11,31,63,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:44px;height:44px;border-radius:10px;background:var(--navy);display:grid;place-items:center;color:var(--yellow)}
+.logo-mark svg{width:28px;height:28px}
+.logo-text b{display:block;font-size:19px;font-weight:800;color:var(--navy);letter-spacing:.5px;line-height:1.1}
+.logo-text small{font-size:10.5px;font-weight:600;color:var(--muted);letter-spacing:.6px}
+.menu{display:flex;gap:28px;font-weight:500;font-size:14.5px}
+.menu a{padding:6px 0;border-bottom:2px solid transparent}
+.menu a:hover,.menu a.active{color:var(--navy);border-color:var(--yellow)}
+.burger{display:none;background:none;border:0;cursor:pointer;color:var(--navy)}
+.burger svg{width:28px;height:28px}
+
+/* Hero */
+.hero{background:linear-gradient(120deg,#fff8e6 0%,#fff 45%,#eef3fb 100%);padding:48px 0 56px;overflow:hidden}
+.hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.pill{display:inline-block;background:#fff;border:1px solid #f1deaa;color:#8a6410;border-radius:999px;font-size:12px;font-weight:600;padding:5px 12px;margin-bottom:16px}
+.hero h1{font-size:clamp(30px,5vw,50px);font-weight:800;color:var(--navy)}
+.hero h1 em{font-style:normal;color:var(--yellow-d);display:block}
+.hero p.lead{color:var(--muted);margin:18px 0 24px;max-width:520px;font-size:16px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:560px}
+.trust div{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500;color:var(--navy);line-height:1.25}
+.trust svg{width:26px;height:26px;color:var(--yellow-d);flex:none}
+.hero-img{position:relative}
+.hero-img .frame{border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(11,31,63,.25);aspect-ratio:4/4.4;background:var(--navy)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-badge{position:absolute;left:-14px;bottom:22px;background:var(--navy);color:#fff;border-radius:12px;padding:12px 16px;display:flex;gap:12px;align-items:center;box-shadow:var(--shadow);max-width:80%}
+.hero-badge svg{width:30px;height:30px;color:var(--yellow);flex:none}
+.hero-badge b{display:block;font-size:13.5px;line-height:1.2}
+.hero-badge small{font-size:11.5px;color:#c4d0e8}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.25s;position:relative}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(11,31,63,.16)}
+.card .img{aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,#dfe7f5,#f4f7fc)}
+.card .img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover .img img{transform:scale(1.05)}
+.card .body{padding:30px 18px 18px;position:relative}
+.card .ico{position:absolute;top:-22px;left:18px;width:44px;height:44px;border-radius:10px;background:var(--yellow);color:var(--navy);display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.card .ico svg{width:24px;height:24px}
+.card h3{font-size:17px;color:var(--navy);margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--muted);min-height:42px}
+.card a.more{display:inline-block;margin-top:10px;font-size:13.5px;font-weight:600;color:var(--yellow-d)}
+.card a.more:hover{text-decoration:underline}
+
+/* Home Care */
+.homecare{position:relative;background:var(--navy);color:#fff;padding:0;overflow:hidden}
+.homecare .container{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;align-items:stretch;padding:0}
+.homecare .photo{min-height:320px;position:relative;background:var(--navy-2)}
+.homecare .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.homecare .txt{padding:48px 36px}
+.homecare .pill{background:var(--yellow);border-color:var(--yellow);color:var(--navy)}
+.homecare h2{font-size:clamp(26px,3.6vw,36px);margin-bottom:12px}
+.homecare p{color:#c4d0e8;margin-bottom:22px;max-width:560px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.checks li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:500}
+.checks svg{width:20px;height:20px;color:var(--yellow);flex:none}
+
+/* Why */
+.why{background:var(--navy);color:#fff;padding:56px 0}
+.why .sec-title{color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+.why-item{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:24px 18px;text-align:center}
+.why-item svg{width:44px;height:44px;color:var(--yellow);margin:0 auto 10px}
+.why-item h3{font-size:16px;margin-bottom:4px}
+.why-item p{font-size:13px;color:#b8c6e2}
+
+/* How */
+.steps{display:flex;align-items:stretch;justify-content:center;gap:14px;flex-wrap:wrap}
+.step{flex:1 1 240px;max-width:320px;display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.step .num{width:34px;height:34px;border-radius:50%;background:var(--yellow);color:var(--navy);font-weight:700;display:grid;place-items:center;flex:none}
+.step svg.big{width:44px;height:44px;color:var(--yellow-d);flex:none}
+.step h3{font-size:15.5px;color:var(--navy)}
+.step p{font-size:12.5px;color:var(--muted)}
+.arrow{align-self:center;color:var(--navy);font-size:26px}
+
+/* Areas */
+.areas{background:var(--soft)}
+.areas .container{display:grid;grid-template-columns:.8fr 1.4fr .8fr;gap:28px;align-items:center}
+.areas h2{font-size:clamp(24px,3.2vw,32px);color:var(--navy);margin-bottom:10px}
+.areas p{color:var(--muted);font-size:14.5px;margin-bottom:18px}
+.map{position:relative;aspect-ratio:16/10;border-radius:var(--radius);background:
+ radial-gradient(circle at 30% 40%,#e7f1de 0 18%,transparent 19%),
+ radial-gradient(circle at 70% 60%,#dbeaf6 0 20%,transparent 21%),
+ linear-gradient(135deg,#eef2e6,#e4ecf3);border:1px solid var(--line);overflow:hidden}
+.map::before{content:"";position:absolute;inset:0;background:
+ repeating-linear-gradient(35deg,transparent 0 38px,rgba(255,255,255,.7) 38px 41px),
+ repeating-linear-gradient(-30deg,transparent 0 55px,rgba(255,255,255,.55) 55px 58px)}
+.pin{position:absolute;font-size:11px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:3px;transform:translate(-50%,-100%)}
+.pin svg{width:14px;height:14px;color:#2b5fbf}
+.pin.center{font-size:12.5px}
+.pin.center svg{width:38px;height:38px;color:var(--navy)}
+.pin.center span{background:var(--yellow);border-radius:6px;padding:3px 10px;position:absolute;top:50%;left:50%;transform:translate(-50%,-10%);white-space:nowrap}
+.dehradun-card{border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:4/4.2;background:var(--navy);box-shadow:var(--shadow)}
+.dehradun-card img{width:100%;height:100%;object-fit:cover}
+.dehradun-card div{position:absolute;inset:auto 0 0 0;padding:18px;color:#fff;background:linear-gradient(transparent,rgba(11,31,63,.9))}
+.dehradun-card b{font-size:20px;display:block;line-height:1.1}
+.dehradun-card small{font-size:12px;color:#d7e0f2}
+
+/* Reviews */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.review .who{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--yellow);font-weight:700;display:grid;place-items:center}
+.review b{display:block;font-size:14.5px;color:var(--navy);line-height:1.2}
+.review small{font-size:12px;color:var(--muted)}
+.stars{color:var(--yellow);letter-spacing:2px;margin-bottom:8px;font-size:15px}
+.review p{font-size:13.5px;color:var(--muted)}
+
+/* FAQ */
+.faq{background:var(--soft)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;max-width:980px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0}
+summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:600;font-size:14.5px;color:var(--navy);display:flex;justify-content:space-between;gap:12px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"⌄";font-size:18px;transition:.2s;color:var(--muted)}
+details[open] summary::after{transform:rotate(180deg)}
+details p{padding:0 18px 16px;font-size:13.5px;color:var(--muted)}
+
+/* CTA band */
+.cta-band{background:var(--yellow);padding:28px 0}
+.cta-band .container{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-band h2{font-size:clamp(20px,2.8vw,26px);color:var(--navy)}
+.cta-band p{font-size:14px;color:#3d3510}
+.cta-band .cta-row{margin:0}
+.cta-band .btn-navy{border-color:var(--navy)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.contact-grid h2{font-size:clamp(24px,3vw,30px);color:var(--navy);margin-bottom:8px}
+.contact-grid>div>p{color:var(--muted);font-size:14.5px;margin-bottom:20px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.info div{display:flex;gap:12px;align-items:flex-start}
+.info .ic{width:40px;height:40px;border-radius:50%;background:var(--yellow);color:var(--navy);display:grid;place-items:center;flex:none}
+.info .ic svg{width:20px;height:20px}
+.info small{display:block;font-size:12px;color:var(--muted)}
+.info b{font-size:14px;color:var(--navy);word-break:break-word}
+.form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.form h3{font-size:18px;color:var(--navy);margin-bottom:14px}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form input,.form select,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:14px;margin-bottom:12px;background:#fff;color:var(--ink)}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--yellow);border-color:var(--yellow)}
+.form textarea{min-height:90px;resize:vertical}
+.form .btn{width:100%}
+
+/* Footer */
+footer{background:var(--navy);color:#c4d0e8;padding:48px 0 0;font-size:13.5px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:30px}
+footer h4{color:#fff;font-size:15px;margin-bottom:12px}
+footer li{margin-bottom:7px}
+footer a:hover{color:var(--yellow)}
+footer .logo-text b{color:#fff}
+footer .logo-mark{background:var(--navy-2)}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:34px;padding:16px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px}
+
+/* Floating buttons */
+.float{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px;z-index:60}
+.float a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.float a svg{width:26px;height:26px}
+.float .call{background:var(--yellow);color:var(--navy)}
+.float .wa{background:var(--green)}
+
+/* Responsive */
+@media(max-width:1000px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .areas .container{grid-template-columns:1fr 1fr}
+  .areas .container>div:first-child{grid-column:1/-1;text-align:center}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:820px){
+  section{padding:46px 0}
+  .menu{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:6px 20px 16px;border-top:1px solid var(--line);box-shadow:0 12px 20px rgba(0,0,0,.08);display:none}
+  .menu.open{display:flex}
+  .menu a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+  .nav-cta{display:none}
+  .hero .container{grid-template-columns:1fr}
+  .hero-img{order:-1;max-width:460px;margin:0 auto;width:100%}
+  .hero-img .frame{aspect-ratio:16/11}
+  .hero-badge{left:10px}
+  .trust{grid-template-columns:1fr 1fr}
+  .homecare .container{grid-template-columns:1fr}
+  .homecare .photo{min-height:240px}
+  .homecare .txt{padding:34px 20px}
+  .contact-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr}
+  .arrow{display:none}
+  .topbar .hide-sm{display:none}
+}
+@media(max-width:560px){
+  .services-grid,.reviews-grid,.why-grid{grid-template-columns:1fr}
+  .areas .container{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .checks,.info,.form .row{grid-template-columns:1fr}
+  .cta-row .btn{flex:1 1 100%}
+  .cta-band .container{flex-direction:column;text-align:center}
+  .cta-band .cta-row{width:100%}
+  .logo-text b{font-size:16px}
+  .copy{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 119.5 9 2.5 2.5 0 0112 11.5z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm4.2 13.4l-5.2-3.1V6.5h1.5v4.9l4.5 2.7z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7 12.500l3.200 3.200L17 8.800" fill="none" stroke="#fff" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L4 5v6c0 5.2 3.4 9.9 8 11 4.6-1.1 8-5.8 8-11V5zm-1 14l-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2L4 14h6l-1 8 9-12h-6z"/></symbol>
+    <symbol id="i-rupee" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm3.5 6h-2.3c.4.4.7.9.8 1.5H15.5v1.3H14c-.3 1.6-1.6 2.7-3.6 2.8l3.6 3.4h-2L7.5 13.7V12.4h2.8c1.2 0 2-.5 2.2-1.3H7.5V9.5h4.9c-.3-.6-1-1-2-1H7.5V7h8z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.600 5.700 21l1.500-7L2 9.300l7-.8z"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm-3.500 7.500a1.200 1.200 0 11-1.200 1.200 1.200 1.200 0 011.200-1.200zm7 0a1.200 1.200 0 11-1.200 1.200 1.200 1.200 0 011.200-1.200zM12 18a6 6 0 01-5.200-3h10.400A6 6 0 0112 18z"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L2 12h3v8h5v-5h4v5h5v-8h3z"/></symbol>
+    <symbol id="i-wash" viewBox="0 0 24 24"><path fill="currentColor" d="M5 2h14a1 1 0 011 1v18a1 1 0 01-1 1H5a1 1 0 01-1-1V3a1 1 0 011-1zm7 6a5 5 0 105 5 5 5 0 00-5-5zM7 4.500A1 1 0 108 5.500 1 1 0 007 4.500zm3 0A1 1 0 1011 5.500 1 1 0 0010 4.500z"/></symbol>
+    <symbol id="i-geyser" viewBox="0 0 24 24"><path fill="currentColor" d="M8 2h8a2 2 0 012 2v12a4 4 0 01-4 4h-4a4 4 0 01-4-4V4a2 2 0 012-2zm3 17v3h2v-3zm-2-9h6V8H9z"/></symbol>
+    <symbol id="i-micro" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm2 2v10h10V7zm12 0v2h2V7zm0 4v2h2v-2zm0 4v2h2v-2z"/></symbol>
+    <symbol id="i-pump" viewBox="0 0 24 24"><path fill="currentColor" d="M9 2h6v3h-2v2h3a3 3 0 013 3v7a4 4 0 01-4 4H8a4 4 0 01-4-4v-7a3 3 0 013-3h2V5H9zm3 8a3.500 3.500 0 103.500 3.500A3.500 3.500 0 0012 10z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2s7 7.300 7 12a7 7 0 01-14 0c0-4.700 7-12 7-12z"/></symbol>
+    <symbol id="i-ac" viewBox="0 0 24 24"><path fill="currentColor" d="M3 4h18a1 1 0 011 1v7a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1zm1 2v1.500h16V6zM6 15l1 3-1.500 3H7l1-2 1 2h1.500L9 18l1-3H8.500l-.5 1.500L7.500 15zm8 0v6h1.500v-6zm4 0v6h1.500v-6z"/></symbol>
+    <symbol id="i-fridge" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a1 1 0 011 1v18a1 1 0 01-1 1H7a1 1 0 01-1-1V3a1 1 0 011-1zm1 6v1.500h1V8zm0 4v4h1v-4zm0-8v2h8V4z"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path fill="currentColor" d="M19.400 13a7.500 7.500 0 000-2l2.100-1.600-2-3.500-2.500 1a7.500 7.500 0 00-1.700-1L15 3h-4l-.4 2.900a7.500 7.500 0 00-1.700 1l-2.500-1-2 3.500L6.600 11a7.500 7.500 0 000 2l-2.100 1.600 2 3.500 2.500-1a7.500 7.500 0 001.700 1L11 21h4l.4-2.900a7.500 7.500 0 001.700-1l2.500 1 2-3.500zM13 15.500a3.500 3.500 0 113.500-3.500 3.500 3.500 0 01-3.500 3.500z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h2v2h6V2h2v2h3a1 1 0 011 1v15a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1h3zM5 9v10h14V9zm2 2h4v4H7z"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path fill="currentColor" d="M22 6.500a5.500 5.500 0 01-7.200 5.200L7.500 19a2.100 2.100 0 01-3-3l7.300-7.300A5.500 5.500 0 0117.500 1.500l-3 3 .5 3.500 3.500.5 3-3A5.500 5.500 0 0122 6.500z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm9 7l8-5H4zm0 2L4 9v8h16V9z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path fill="currentColor" d="M2 21l21-9L2 3v7l15 2-15 2z"/></symbol>
+    <symbol id="i-hat" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3a8 8 0 00-8 8v2H2v3h20v-3h-2v-2a8 8 0 00-8-8zm-1 2h2v6h-2zM4 18h16v2H4z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></symbol>
+  </defs>
+</svg>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <span><svg><use href="#i-pin"/></svg> Shop No. 86, Clock Tower, Dehradun, Uttarakhand 248002</span>
+    <span><svg><use href="#i-clock"/></svg> Mon - Sun: 8:00 AM - 8:00 PM</span>
+    <span class="hide-sm"><svg><use href="#i-check"/></svg> All Dehradun Service Available</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo" aria-label="M N Super Electricals & Air Cool">
+      <div class="logo-mark"><svg><use href="#i-bolt"/></svg></div>
+      <div class="logo-text"><b>M N SUPER</b><small>ELECTRICALS &amp; AIR COOL</small></div>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#home" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-yellow nav-cta" href="tel:+918630529924">
+      <svg><use href="#i-phone"/></svg><span><small>Call Now</small><b>8630529924</b></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <div>
+      <span class="pill">Trusted by 1000+ Homes in Dehradun</span>
+      <h1>Reliable Electrical &amp; Home Appliance Repair <em>in Dehradun</em></h1>
+      <p class="lead">Professional electrical and appliance repair services for your home and business. Safe work, fast service and affordable prices – all under one roof.</p>
+      <div class="cta-row">
+        <a class="btn btn-yellow" href="tel:+918630529924"><svg><use href="#i-phone"/></svg><span><small>Call for Service</small><b>8630529924</b></span></a>
+        <a class="btn btn-outline" href="https://wa.me/918630529924?text=Hello%20M%20N%20Super%2C%20I%20need%20a%20repair%20service." target="_blank" rel="noopener"><svg class="wa-ico"><use href="#i-wa"/></svg><span><small>WhatsApp Us</small><b>8630529924</b></span></a>
+      </div>
+      <div class="trust">
+        <div><svg><use href="#i-shield"/></svg>Safe &amp; Reliable Work</div>
+        <div><svg><use href="#i-clock"/></svg>On Time Service</div>
+        <div><svg><use href="#i-rupee"/></svg>Affordable Prices</div>
+        <div><svg><use href="#i-star"/></svg>100% Customer Satisfaction</div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="frame"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=70" alt="Electrician working on wiring" fetchpriority="high"></div>
+      <div class="hero-badge"><svg><use href="#i-bolt"/></svg><div><b>Your Local Electrical Experts</b><small>in Dehradun</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <div class="container">
+    <h2 class="sec-title">Our Repair &amp; Maintenance Services</h2>
+    <p class="sec-sub">We provide complete electrical and home appliance repair solutions for your home and office in Dehradun. Professional service, genuine spare parts and expert technicians.</p>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- Complete Home Electrical Care -->
+<section class="homecare" id="about">
+  <div class="container">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1646640381839-02748ae8ddf0?auto=format&fit=crop&w=900&q=70" alt="Technician fitting electrical equipment" loading="lazy"></div>
+    <div class="txt">
+      <span class="pill">Safe Homes, Brighter Living</span>
+      <h2>Complete Home Electrical Care</h2>
+      <p>From new house wiring to switch installation, MCB fitting, light &amp; fan installation – we handle all your electrical needs with safety and precision.</p>
+      <ul class="checks">
+        <li><svg><use href="#i-check"/></svg>New House Wiring &amp; Renovation</li>
+        <li><svg><use href="#i-check"/></svg>Power Point Installation</li>
+        <li><svg><use href="#i-check"/></svg>Switch &amp; Socket Installation</li>
+        <li><svg><use href="#i-check"/></svg>Inverter &amp; Battery Connection</li>
+        <li><svg><use href="#i-check"/></svg>MCB &amp; DB Panel Fitting</li>
+        <li><svg><use href="#i-check"/></svg>Motor &amp; Pump Wiring</li>
+        <li><svg><use href="#i-check"/></svg>Light &amp; Fan Installation</li>
+        <li><svg><use href="#i-check"/></svg>Meter &amp; Cable Work</li>
+        <li><svg><use href="#i-check"/></svg>Electrical Fault Finding &amp; Repair</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Why choose -->
+<section class="why">
+  <div class="container">
+    <h2 class="sec-title">Why Choose M N Super?</h2>
+    <div class="why-grid">
+      <div class="why-item"><svg><use href="#i-hat"/></svg><h3>Expert Technicians</h3><p>Skilled and experienced professionals</p></div>
+      <div class="why-item"><svg><use href="#i-clock"/></svg><h3>Fast Response</h3><p>Quick service across Dehradun</p></div>
+      <div class="why-item"><svg><use href="#i-rupee"/></svg><h3>Fair Pricing</h3><p>Transparent and affordable rates</p></div>
+      <div class="why-item"><svg><use href="#i-star"/></svg><h3>Quality Work</h3><p>Reliable service with customer satisfaction</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section>
+  <div class="container">
+    <h2 class="sec-title">How It Works</h2>
+    <p class="sec-sub">Get your electrical or appliance issue resolved in just 3 simple steps.</p>
+    <div class="steps">
+      <div class="step"><svg class="big"><use href="#i-phone"/></svg><div><h3><span style="color:var(--yellow-d)">1</span> Call or WhatsApp</h3><p>Contact us at 8630529924 and tell us your requirement.</p></div></div>
+      <div class="arrow">→</div>
+      <div class="step"><svg class="big"><use href="#i-cal"/></svg><div><h3><span style="color:var(--yellow-d)">2</span> Confirm Your Visit</h3><p>We schedule a convenient time for your service.</p></div></div>
+      <div class="arrow">→</div>
+      <div class="step"><svg class="big"><use href="#i-wrench"/></svg><div><h3><span style="color:var(--yellow-d)">3</span> Get It Fixed</h3><p>Our expert arrives and resolves the issue.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Service areas -->
+<section class="areas" id="areas">
+  <div class="container">
+    <div>
+      <h2>Serving All Across Dehradun</h2>
+      <p>We provide electrical and home appliance repair services in all areas of Dehradun.</p>
+      <a class="btn btn-yellow" href="tel:+918630529924"><svg><use href="#i-pin"/></svg><span><b>All Dehradun</b><small>Service Available</small></span></a>
+    </div>
+    <div class="map" role="img" aria-label="Map showing Dehradun service areas">
+      <div class="pin" style="left:62%;top:20%"><svg><use href="#i-pin"/></svg>Sahastradhara</div>
+      <div class="pin" style="left:30%;top:28%"><svg><use href="#i-pin"/></svg>Rajpur</div>
+      <div class="pin" style="left:72%;top:46%"><svg><use href="#i-pin"/></svg>Patel Nagar</div>
+      <div class="pin" style="left:20%;top:52%"><svg><use href="#i-pin"/></svg>Dalanwala</div>
+      <div class="pin" style="left:88%;top:58%"><svg><use href="#i-pin"/></svg>Nehrugram</div>
+      <div class="pin center" style="left:50%;top:58%"><svg><use href="#i-pin"/></svg><span>All Dehradun</span></div>
+      <div class="pin" style="left:18%;top:70%"><svg><use href="#i-pin"/></svg>Clock Tower</div>
+      <div class="pin" style="left:34%;top:78%"><svg><use href="#i-pin"/></svg>ISBT</div>
+      <div class="pin" style="left:76%;top:84%"><svg><use href="#i-pin"/></svg>Patel Nagar</div>
+      <div class="pin" style="left:24%;top:92%"><svg><use href="#i-pin"/></svg>Kargi</div>
+      <div class="pin" style="left:56%;top:92%"><svg><use href="#i-pin"/></svg>Vasant Vihar</div>
+    </div>
+    <div class="dehradun-card">
+      <img src="https://images.unsplash.com/photo-1585032317668-2da731001cf3?auto=format&fit=crop&w=700&q=70" alt="Hills near Dehradun, Uttarakhand" loading="lazy">
+      <div><b>Dehradun</b><small>Uttarakhand</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews">
+  <div class="container">
+    <h2 class="sec-title">Customer Reviews</h2>
+    <p class="sec-sub">What our customers say about our service.</p>
+    <!-- PLACEHOLDER REVIEWS: replace the entries in the REVIEWS array (bottom of page) with real customer reviews before going live. -->
+    <div class="reviews-grid" id="reviewsGrid"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <h2 class="sec-title">Frequently Asked Questions</h2>
+    <p class="sec-sub"></p>
+    <div class="faq-grid">
+      <details open><summary>What areas do you serve?</summary><p>We provide electrical and home appliance repair services in all areas of Dehradun, Uttarakhand.</p></details>
+      <details><summary>What types of electrical work do you do?</summary><p>House wiring, MCB &amp; DB panel fitting, switch and socket installation, light and fan fitting, inverter connection, motor and pump wiring, and electrical fault finding.</p></details>
+      <details><summary>How can I book a service?</summary><p>Call or WhatsApp us on 8630529924, or send a message using the form below. We will confirm a convenient visit time.</p></details>
+      <details><summary>How much do you charge?</summary><p>Pricing depends on the work needed. We share a transparent estimate after understanding or inspecting the issue.</p></details>
+      <details><summary>Do you repair all home appliances?</summary><p>We repair AC, refrigerator, washing machine, geyser, microwave oven, RO purifier, submersible pump and more. Call us to confirm your specific appliance or brand.</p></details>
+      <details><summary>Do you provide the spare parts?</summary><p>Yes, we can arrange genuine spare parts when required. Ask our technician for details.</p></details>
+      <details><summary>Is there any warranty on the service?</summary><p>Please contact us for warranty details on the specific service or spare part.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<div class="cta-band">
+  <div class="container">
+    <div>
+      <h2>Need an Electrician or Appliance Repair?</h2>
+      <p>Call or WhatsApp now for fast, reliable and affordable service in Dehradun.</p>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-navy" href="tel:+918630529924"><svg><use href="#i-phone"/></svg><span><small>Call Now</small><b>8630529924</b></span></a>
+      <a class="btn btn-outline" href="https://wa.me/918630529924" target="_blank" rel="noopener"><svg class="wa-ico"><use href="#i-wa"/></svg><span><small>WhatsApp Us</small><b>8630529924</b></span></a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container contact-grid">
+    <div>
+      <h2>Get In Touch</h2>
+      <p>Visit our shop or contact us for any electrical or appliance repair service. We are always ready to help you.</p>
+      <div class="info">
+        <div><span class="ic"><svg><use href="#i-phone"/></svg></span><span><small>Phone / WhatsApp</small><b><a href="tel:+918630529924">8630529924</a></b></span></div>
+        <div><span class="ic"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><b><a href="mailto:moinali5830@gmail.com">moinali5830@gmail.com</a></b></span></div>
+        <div><span class="ic"><svg><use href="#i-pin"/></svg></span><span><small>Address</small><b>Shop No. 86, Clock Tower, Dehradun, Uttarakhand 248002</b></span></div>
+        <div><span class="ic"><svg><use href="#i-check"/></svg></span><span><small>Service Area</small><b>All Dehradun</b></span></div>
+      </div>
+    </div>
+    <form class="form" id="contactForm">
+      <h3>Send Us a Message</h3>
+      <div class="row">
+        <input type="text" id="fName" placeholder="Your Name" required>
+        <input type="tel" id="fPhone" placeholder="Your Phone Number" required pattern="[0-9+\s\-]{8,15}">
+      </div>
+      <select id="fService" required>
+        <option value="" disabled selected>Service Required</option>
+        <option>House Wiring</option>
+        <option>Washing Machine Repair</option>
+        <option>Geyser Repair</option>
+        <option>Microwave Oven Repair</option>
+        <option>Submersible Pump Repair</option>
+        <option>RO Water Purifier Repair</option>
+        <option>AC Repair</option>
+        <option>Fridge Repair</option>
+        <option>All Electrical Maintenance</option>
+      </select>
+      <textarea id="fMsg" placeholder="Your Message (Optional)"></textarea>
+      <button class="btn btn-yellow" type="submit"><svg><use href="#i-send"/></svg>Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#home" class="logo" style="margin-bottom:12px">
+          <div class="logo-mark"><svg><use href="#i-bolt"/></svg></div>
+          <div class="logo-text"><b>M N SUPER</b><small style="color:#9fb0d0">ELECTRICALS &amp; AIR COOL</small></div>
+        </a>
+        <p>Your trusted partner for electrical and home appliance repair services in Dehradun.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Services</h4>
+        <ul>
+          <li>Electrical Work</li>
+          <li>AC Repair</li>
+          <li>Fridge Repair</li>
+          <li>Washing Machine Repair</li>
+          <li>Geyser Repair</li>
+          <li>RO Repair &amp; More</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul>
+          <li><a href="tel:+918630529924">8630529924</a></li>
+          <li><a href="mailto:moinali5830@gmail.com">moinali5830@gmail.com</a></li>
+          <li>Shop No. 86, Clock Tower, Dehradun, Uttarakhand 248002</li>
+          <li>All Dehradun</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="yr">2024</span> M N SUPER ELECTRICALS &amp; AIR COOL. All Rights Reserved.</span>
+      <span>Reliable Service &nbsp;|&nbsp; Expert Technicians &nbsp;|&nbsp; A Safer, Brighter Dehradun</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating call / WhatsApp -->
+<div class="float">
+  <a class="wa" href="https://wa.me/918630529924" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+  <a class="call" href="tel:+918630529924" aria-label="Call now"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+/* ---------- Services data (images from Unsplash) ---------- */
+var U = function(id){ return 'https://images.unsplash.com/' + id + '?auto=format&fit=crop&w=640&q=70'; };
+var SERVICES = [
+  {t:'House Wiring', d:'Complete house wiring, new installation and old wiring repair.', i:'i-home', img:U('photo-1621905251918-48416bd8575a')},
+  {t:'Washing Machine Repair', d:'All types of washing machine repair and maintenance.', i:'i-wash', img:U('photo-1604335399105-a0c585fd81a1')},
+  {t:'Geyser Repair', d:'Geyser installation, repair and maintenance.', i:'i-geyser', img:U('photo-1594233078955-e1f73a02ebb2')},
+  {t:'Microwave Oven Repair', d:'Repair and servicing of all microwave oven brands.', i:'i-micro', img:U('photo-1585659722983-3a675dabf23d')},
+  {t:'Submersible Pump Repair', d:'Submersible pump repair, fitting and maintenance.', i:'i-pump', img:U('photo-1607472586893-edb57bdc0e39')},
+  {t:'RO Water Purifier Repair', d:'RO installation, repair and regular servicing.', i:'i-drop', img:U('photo-1662454378069-fb8a9c6c0c88')},
+  {t:'AC Repair', d:'AC installation, repair, gas charging and maintenance.', i:'i-ac', img:U('photo-1718203862467-c33159fdc504')},
+  {t:'Fridge Repair', d:'Refrigerator repair and servicing (all brands).', i:'i-fridge', img:U('photo-1721563927724-74b1a0ddef33')},
+  {t:'All Electrical Maintenance', d:'Switch, socket, MCB, DB panel, fan, light and all electrical solutions.', i:'i-gear', img:U('photo-1660330589693-99889d60181e')}
+];
+var grid = document.getElementById('servicesGrid');
+SERVICES.forEach(function(s){
+  var el = document.createElement('article');
+  el.className = 'card';
+  el.innerHTML =
+    '<div class="img"><img loading="lazy" alt="'+s.t+' in Dehradun" src="'+s.img+'"></div>' +
+    '<div class="body"><span class="ico"><svg><use href="#'+s.i+'"/></svg></span>' +
+    '<h3>'+s.t+'</h3><p>'+s.d+'</p>' +
+    '<a class="more" href="https://wa.me/918630529924?text='+encodeURIComponent('Hello, I need '+s.t+' service in Dehradun.')+'" target="_blank" rel="noopener">Explore Service →</a></div>';
+  grid.appendChild(el);
+});
+/* Hide broken images gracefully (gradient background stays) */
+document.addEventListener('error', function(e){
+  if(e.target && e.target.tagName === 'IMG'){ e.target.style.visibility = 'hidden'; }
+}, true);
+
+/* ---------- Reviews: PLACEHOLDERS – replace with real customer reviews ---------- */
+var REVIEWS = [
+  {n:'Customer Name', a:'Area, Dehradun', r:5, t:'Add a real customer review here.'},
+  {n:'Customer Name', a:'Area, Dehradun', r:5, t:'Add a real customer review here.'},
+  {n:'Customer Name', a:'Area, Dehradun', r:5, t:'Add a real customer review here.'}
+];
+var rg = document.getElementById('reviewsGrid');
+REVIEWS.forEach(function(v){
+  var el = document.createElement('div');
+  el.className = 'review';
+  el.innerHTML = '<div class="who"><div class="avatar">'+v.n.charAt(0)+'</div><div><b>'+v.n+'</b><small>'+v.a+'</small></div></div>' +
+                 '<div class="stars" aria-label="'+v.r+' out of 5 stars">'+'★'.repeat(v.r)+'</div><p>'+v.t+'</p>';
+  rg.appendChild(el);
+});
+
+/* ---------- Mobile menu ---------- */
+var menu = document.getElementById('menu');
+document.getElementById('burger').addEventListener('click', function(){ menu.classList.toggle('open'); });
+menu.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){
+    menu.classList.remove('open');
+    menu.querySelectorAll('a').forEach(function(x){ x.classList.remove('active'); });
+    a.classList.add('active');
+  });
+});
+
+/* ---------- Contact form -> opens WhatsApp with the details ---------- */
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var msg = 'Hello M N Super,%0AName: ' + encodeURIComponent(document.getElementById('fName').value) +
+            '%0APhone: ' + encodeURIComponent(document.getElementById('fPhone').value) +
+            '%0AService: ' + encodeURIComponent(document.getElementById('fService').value) +
+            '%0AMessage: ' + encodeURIComponent(document.getElementById('fMsg').value || '-');
+  window.open('https://wa.me/918630529924?text=' + msg, '_blank');
+});
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
